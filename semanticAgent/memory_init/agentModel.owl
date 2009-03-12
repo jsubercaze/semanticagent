@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF [
+  <!ENTITY dl-safe "http://owldl.com/ontologies/dl-safe.owl#">
+  <!ENTITY swrl  "http://www.w3.org/2003/11/swrl#" >
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+  <!ENTITY ruleml  "http://www.w3.org/2003/11/ruleml#" >
+]>
+<rdf:RDF xml:base="http://liris.cnrs.fr/julien.subercaze/ontologies/agentModel.owl#" xmlns:dl-safe="http://liris.cnrs.fr/julien.subercaze/ontologies/agentModel.owl#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:swrl="http://www.w3.org/2003/11/swrl#" xmlns:ruleml="http://www.w3.org/2003/11/ruleml#">
+
+ 
+
+	<!-- Ontology Information -->
+	<owl:Ontology rdf:about="" rdfs:label="SemanticAgentModel">
+		<rdfs:comment>
+			Model of agent
+		</rdfs:comment>
+	</owl:Ontology>
+
+	<!-- Classes -->
+	<owl:Class rdf:about="#State">
+	 </owl:Class>
+	 <owl:Class rdf:about="#Message">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="#hasPerformative" />
+				<owl:someValuesFrom rdf:resource="#Performative" />
+			</owl:Restriction>
+		</rdfs:subClassOf>
+  </owl:Class>
+	   
+	<owl:Class rdf:about="#ParameterType"/>
+	
+  	
+  <owl:Class rdf:about="#Agent"/>
+
+  	
+	<owl:Class rdf:about="#Performative"/>
+	
+	<owl:Class rdf:about="#Action"/>
+	
+  <owl:Class rdf:about="#ActionList"/>
+
+ <owl:Class rdf:about="#NextState">
+  <rdfs:subClassOf>
+	   <owl:Restriction>
+              <owl:onProperty rdf:resource="#hasStateValue"/>
+              <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		</owl:Class>
+  
+  <owl:Class rdf:about="#StateValue"/>
+        
+
+	<!-- Object Properties -->
+  <owl:ObjectProperty rdf:about="#hasStateValue"/>
+  <owl:ObjectProperty rdf:about="#hasList"/>
+  <owl:ObjectProperty rdf:about="#hasParameterName"/>
+  <owl:ObjectProperty rdf:about="#hasParameterValue"/>
+  
+  
+
+  <!-- Instances -->
+  <dl-safe:ActionList rdf:about="#AL"/>
+  <dl-safe:ParameterType rdf:about="#SendTo"/>
+  
+  <dl-safe:Agent rdf:about="#ReasonerAgent"/>
+  <dl-safe:Agent rdf:about="#AnswerAgent"/>
+  
+  <dl-safe:StateValue rdf:about="#BEGIN"/>
+  <dl-safe:StateValue rdf:about="#A"/>
+  <dl-safe:StateValue rdf:about="#B"/>
+  <dl-safe:StateValue rdf:about="#C"/>
+  <dl-safe:StateValue rdf:about="#D"/>
+  <dl-safe:StateValue rdf:about="#E"/>
+  <dl-safe:StateValue rdf:about="#END"/>
+  
+  
+  <dl-safe:Action rdf:about="#RegisterDF"/>
+  <dl-safe:Action rdf:about="#Inform"/>
+  <dl-safe:Action rdf:about="#Request"/>
+  <dl-safe:Action rdf:about="#Receive"/>
+  <dl-safe:Action rdf:about="#SendBehaviour"/>
+  <dl-safe:Action rdf:about="#ReceiveBehaviour"/>
+  
+  
+  <dl-safe:EmptyList rdf:about="#Agent"/>
+  
+  <dl-safe:EmptyList rdf:about="#finListe"/>
+  
+
+  
+	<dl-safe:State rdf:about="#CurrentState">
+   	<dl-safe:hasStateValue rdf:resource="#BEGIN"/>
+	</dl-safe:State>
+	
+
+	
+	<dl-safe:NextState rdf:about="#TheNextState"/>
+	
+	  <owl:AllDifferent>
+		<owl:distinctMembers rdf:parseType="Collection">
+			<owl:Thing rdf:about="#CurrentState" />
+			<owl:Thing rdf:about="#TheNextState" />
+		</owl:distinctMembers>
+	</owl:AllDifferent>
+	
+</rdf:RDF>
