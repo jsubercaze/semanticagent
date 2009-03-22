@@ -1,11 +1,1 @@
 #summary Description of SemanticAgent project
-
-= Introduction =
-
-Add your content here.
-
-
-= Innovation =
-
-
-= Implementation = 
