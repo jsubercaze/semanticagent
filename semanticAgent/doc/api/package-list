@@ -1,0 +1,5 @@
+agent.core.actions
+agent.core.communication
+agent.core.memory
+agent.core.onto
+agent.core.swrlagent
