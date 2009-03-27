@@ -2,7 +2,7 @@ package agent.core.actions;
 
 import java.util.HashMap;
 
-import agent.core.reasoner.ReasonerAgent;
+import agent.core.swrlagent.SWRLAgent;
 
 import jade.core.Agent;
 
@@ -24,5 +24,5 @@ public interface Action {
      * @param a
      * @param parameters
      */
-    void run(ReasonerAgent a, HashMap<String, String> parameters);
+    void run(SWRLAgent a, HashMap<String, String> parameters);
 }

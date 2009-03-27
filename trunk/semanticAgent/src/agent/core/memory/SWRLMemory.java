@@ -101,12 +101,12 @@ public class SWRLMemory {
 	        Class.forName(config.DBDRIVER_CLASS); // load driver
 	      }
 	      catch (Exception e) {
-	        System.out.println("failed loading driver:"+ e.toString());
+	      //  System.out.println("failed loading driver:"+ e.toString());
 	      }
 	      loaded = true;
       }  
       // Create database connection
-      System.out.println("DB:"+config.DB_URL+" user:"+ config.DB_USER+ " pass:"+config.DB_PASSWD);
+    //  System.out.println("DB:"+config.DB_URL+" user:"+ config.DB_USER+ " pass:"+config.DB_PASSWD);
       conn = new DBConnection(config.DB_URL, config.DB_USER, config.DB_PASSWD, config.DB_TYPE);
     }
     return conn;

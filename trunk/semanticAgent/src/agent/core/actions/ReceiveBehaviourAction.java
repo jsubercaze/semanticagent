@@ -21,7 +21,7 @@ import edu.stanford.smi.protegex.owl.swrl.parser.SWRLParser;
 
 import agent.core.communication.Message;
 import agent.core.onto.ReasonerAgentInterface;
-import agent.core.reasoner.ReasonerAgent;
+import agent.core.swrlagent.SWRLAgent;
 
 /**
  * Implementation of Behaviour Reception - Receive the rules in the message,
@@ -35,7 +35,7 @@ import agent.core.reasoner.ReasonerAgent;
  */
 public class ReceiveBehaviourAction implements Action {
 
-    public synchronized void run(ReasonerAgent a,
+    public synchronized void run(SWRLAgent a,
 	    HashMap<String, String> parameters) {
 	a.log.info("Start the receive");
 	// Receive the message of type Inform
@@ -56,14 +56,13 @@ public class ReceiveBehaviourAction implements Action {
 			    new URI(
 				    a.mem.config.BASE),
 			    "dl-safe");
-	    System.out.println(owlModel.getNamespaceManager()
-		    .getNamespaceForPrefix("dl-safe"));
+	    //DEBUG System.out.println(owlModel.getNamespaceManager().getNamespaceForPrefix("dl-safe"));
 	    Set<String> gros = owlModel.getAllImports();
 	    Iterator it = gros.iterator();
 
-	    while (it.hasNext()) {
+	   /* while (it.hasNext()) {
 		System.out.println(it.next().toString());
-	    }
+	    }*/
 	    ImportHelper importHelper = new ImportHelper(
 		    (JenaOWLModel) owlModel);
 	    URI importUri = URIUtilities

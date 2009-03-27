@@ -1,4 +1,4 @@
-
+package agent.demo.swrlagent;
 
 
 import jade.core.Profile;
@@ -27,18 +27,18 @@ public class DemoAskBehaviour {
 		try {
 			rma = ac.createNewAgent("rma", "jade.tools.rma.rma", new Object[0]);
 			rma.start();
-			//AgentController sniffer = ac.createNewAgent("sniffer","jade.tools.sniffer.Sniffer",new Object[0]);
-			//sniffer.start();
+			AgentController sniffer = ac.createNewAgent("sniffer","jade.tools.sniffer.Sniffer",new Object[0]);
+			sniffer.start();
 			//Start the answer agent			
 			Object [] argv = new Object[2];
-			argv[0] = "config/ReasonerAgent.properties";
+			argv[0] = "config/AskAgent.properties";
 			argv[1] = "AskAgent";
-			AgentController reasoner = ac.createNewAgent((String)argv[1], "agent.core.reasoner.ReasonerAgent",argv);
+			AgentController reasoner = ac.createNewAgent((String)argv[1], "agent.core.swrlagent.SWRLAgent",argv);
 			//Thread.sleep(10000);
 			Object [] argve = new Object[2];
-			argve[0] = "config/ReasonerAgent2.properties";
+			argve[0] = "config/AnswerAgent.properties";
 			argve[1] = "AnswerAgent";
-			AgentController reasonere = ac.createNewAgent((String)argve[1], "agent.core.reasoner.ReasonerAgent",argve);	
+			AgentController reasonere = ac.createNewAgent((String)argve[1], "agent.core.swrlagent.SWRLAgent",argve);	
 			//Thread.sleep(10000);
 			reasonere.start();
 			Thread.sleep(1000);

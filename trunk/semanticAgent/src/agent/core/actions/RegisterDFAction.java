@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 import agent.core.communication.Message;
 import agent.core.onto.ReasonerAgentInterface;
-import agent.core.reasoner.ReasonerAgent;
+import agent.core.swrlagent.SWRLAgent;
 import jade.core.Agent;
 /** Specific JADE action - Register to Yellow Pages (Directory facilitator)
  * 
@@ -17,10 +17,10 @@ public class RegisterDFAction implements Action {
 	/** Register the agent to the directory finder
 	 * 
 	 */
-	public synchronized void run(ReasonerAgent A, HashMap<String,String> parameters) {
-		System.out.println("Starting"+this.getClass().getName());
+	public synchronized void run(SWRLAgent A, HashMap<String,String> parameters) {
+		A.log.info("Starting"+this.getClass().getName());
 		//Register to the DF
-		System.out.println("Send message to :"+parameters.get("SendTo"));
+		//System.out.println("Send message to :"+parameters.get("SendTo"));
 		Message.register(A, A.getName());
 	}
 	

@@ -11,7 +11,7 @@ import edu.stanford.smi.protegex.owl.swrl.model.SWRLImp;
 import java.io.StringWriter;
 
 import agent.core.onto.*;
-import agent.core.reasoner.ReasonerAgent;
+import agent.core.swrlagent.SWRLAgent;
 
 import java.util.Vector;
 import java.util.regex.Matcher;
@@ -222,7 +222,7 @@ public class Message {
 	 * 
 	 */
 
-	public static ACLMessage createQueryMessage(ReasonerAgent sender,
+	public static ACLMessage createQueryMessage(SWRLAgent sender,
 			String recieverName, String query) {
 		ACLMessage m = new ACLMessage(ACLMessage.QUERY_REF);
 		AID receiver = new AID(recieverName, false);
@@ -253,7 +253,7 @@ public class Message {
 	 *            RDF Jena Resouce
 	 * 
 	 */
-	public static ACLMessage createInformMessage(ReasonerAgent sender,
+	public static ACLMessage createInformMessage(SWRLAgent sender,
 			String recieverName, Resource r) {
 
 		log.info("Preparing inform message...");
@@ -276,7 +276,7 @@ public class Message {
 	 * @param r
 	 * @return
 	 */
-	public static ACLMessage createBehaviourMessage(ReasonerAgent sender,
+	public static ACLMessage createBehaviourMessage(SWRLAgent sender,
 			String recieverName, Vector<SWRLImp> ruleset) {
 
 		log.info("Preparing inform message...");
@@ -320,7 +320,7 @@ public class Message {
 	 * 
 	 */
 
-	public static void register(ReasonerAgent a, String agentType) {
+	public static void register(SWRLAgent a, String agentType) {
 		DFAgentDescription dfd = new DFAgentDescription();
 		ServiceDescription sd = new ServiceDescription();
 		sd.setType(agentType);
