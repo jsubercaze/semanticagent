@@ -9,7 +9,7 @@ import java.util.Vector;
 
 import agent.core.communication.Message;
 import agent.core.onto.ReasonerAgentInterface;
-import agent.core.reasoner.ReasonerAgent;
+import agent.core.swrlagent.SWRLAgent;
 import edu.stanford.smi.protegex.owl.ProtegeOWL;
 import edu.stanford.smi.protegex.owl.jena.JenaOWLModel;
 import edu.stanford.smi.protegex.owl.jena.parser.ProtegeOWLParser;
@@ -25,11 +25,10 @@ import edu.stanford.smi.protegex.owl.swrl.parser.SWRLParser;
  */
 public class SendBehaviourAction implements Action {
     
-    public synchronized void run(ReasonerAgent A,
+    public synchronized void run(SWRLAgent A,
 	    HashMap<String, String> parameters) {
 	// Extract the behaviours (Collection of Imps)
 	JenaOWLModel owlModel;
-	System.out.println("Envoi à : " + parameters.get("SendTo"));
 	try {
 	    owlModel = ProtegeOWL
 		    .createJenaOWLModelFromInputStream(new FileInputStream(
