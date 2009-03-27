@@ -1,1 +1,16 @@
 #summary Description of SemanticAgent project
+
+=Description=
+
+Coming soon
+
+== Running the demo ==
+
+During the demo, two agents named askAgent and answerAgent will communicate and answerAgent will send its behaviour composed of SWRL rules to askAgent.
+
+The goal of the demo is to show how the agent interpreter is working. Each agent are of type: agent.core.swrlagent.SWRLAgent. The behaviours of the agents are *only* described in swrl:
+
+* memory_init/answerBehaviour.swrl
+* memory_init/askBehaviour.swrl
+
+Behaviours are described are transition rules in an extended finite state machine
