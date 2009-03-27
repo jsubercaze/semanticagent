@@ -17,13 +17,14 @@ import edu.stanford.smi.protegex.owl.swrl.model.SWRLFactory;
 import edu.stanford.smi.protegex.owl.swrl.model.SWRLImp;
 import edu.stanford.smi.protegex.owl.swrl.parser.SWRLParser;
 
-/**
+/** This low level action extracts the rules of the behaviour and sends it to the agent passed as parameter
+ *  <br>Receiver parameter name : <b>SendTo</b>
  * 
  * @author Julien Subercaze
  * 
  */
 public class SendBehaviourAction implements Action {
-
+    
     public synchronized void run(ReasonerAgent A,
 	    HashMap<String, String> parameters) {
 	// Extract the behaviours (Collection of Imps)
