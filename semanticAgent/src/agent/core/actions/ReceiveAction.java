@@ -6,7 +6,7 @@ import agent.core.onto.ReasonerAgentInterface;
 import agent.core.reasoner.ReasonerAgent;
 
 import jade.core.Agent;
-/**
+/** 
  * 
  * @author Julien Subercaze
  *

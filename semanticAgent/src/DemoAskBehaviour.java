@@ -1,4 +1,4 @@
-package agent.demo.reasonerAgent;
+
 
 
 import jade.core.Profile;
@@ -27,8 +27,8 @@ public class DemoAskBehaviour {
 		try {
 			rma = ac.createNewAgent("rma", "jade.tools.rma.rma", new Object[0]);
 			rma.start();
-			AgentController sniffer = ac.createNewAgent("sniffer","jade.tools.sniffer.Sniffer",new Object[0]);
-			sniffer.start();
+			//AgentController sniffer = ac.createNewAgent("sniffer","jade.tools.sniffer.Sniffer",new Object[0]);
+			//sniffer.start();
 			//Start the answer agent			
 			Object [] argv = new Object[2];
 			argv[0] = "config/ReasonerAgent.properties";
