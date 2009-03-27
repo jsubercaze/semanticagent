@@ -1,0 +1,229 @@
+<rdf:RDF
+    xmlns:j.0="http://liris.cnrs.fr/julien.subercaze/ontologies/agentModel.owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:ruleml="http://www.w3.org/2003/11/ruleml#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:dl-safe="http://liris.cnrs.fr/julien.subercaze/ontologies/agentModel.owl"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
+  <rdf:Description rdf:about="">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <owl:imports rdf:resource=""/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A0">
+    <rdf:first rdf:nodeID="A1"/>
+    <rdf:rest rdf:nodeID="A2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="FindNext2 ">
+    <swrl:body rdf:nodeID="A3"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <swrl:head rdf:nodeID="A4"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A5">
+    <swrl:argument1 rdf:resource="#x"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="#State"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#NextItem">
+    <rdf:type rdf:resource="#OWLList"/>
+    <rdf:type rdf:nodeID="A6"/>
+    <rdf:type rdf:nodeID="A7"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="FindNext ">
+    <swrl:body rdf:nodeID="A8"/>
+    <swrl:head rdf:nodeID="A9"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#y">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A10">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A11"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#OtherItem">
+    <rdf:type rdf:resource="#OWLList"/>
+    <rdf:type rdf:nodeID="A12"/>
+    <rdf:type rdf:nodeID="A13"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A14">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:argument1 rdf:resource="#x"/>
+    <swrl:argument2 rdf:resource="#C"/>
+    <swrl:propertyPredicate rdf:resource="#hasStateValue"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A15">
+    <rdf:rest rdf:nodeID="A16"/>
+    <rdf:first rdf:nodeID="A17"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A18">
+    <swrl:propertyPredicate rdf:resource="#hasStateValue"/>
+    <swrl:argument2 rdf:resource="#END"/>
+    <swrl:argument1 rdf:resource="#y"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A12">
+    <owl:hasValue rdf:resource="#finListe"/>
+    <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/lists/2008/09/11/list.owl#hasNext"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A19">
+    <rdf:first rdf:nodeID="A20"/>
+    <rdf:rest rdf:nodeID="A21"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A7">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/lists/2008/09/11/list.owl#hasContents"/>
+    <owl:hasValue rdf:resource="#ReceiveBehaviour"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A22">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:hasValue rdf:resource="#RegisterDF"/>
+    <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/lists/2008/09/11/list.owl#hasContents"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A23">
+    <rdf:first rdf:nodeID="A5"/>
+    <rdf:rest rdf:nodeID="A15"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A6">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/lists/2008/09/11/list.owl#hasNext"/>
+    <owl:hasValue rdf:resource="#finListe"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A4">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A11">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="#hasList"/>
+    <swrl:argument1 rdf:resource="#AL"/>
+    <swrl:argument2 rdf:resource="#OtherItem"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="#hasList"/>
+    <swrl:argument2 rdf:resource="#MyList"/>
+    <swrl:argument1 rdf:resource="#AL"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A17">
+    <swrl:argument2 rdf:resource="#BEGIN"/>
+    <swrl:argument1 rdf:resource="#x"/>
+    <swrl:propertyPredicate rdf:resource="#hasStateValue"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#FindNext1">
+    <swrl:head rdf:nodeID="A24"/>
+    <swrl:body rdf:nodeID="A23"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A25">
+    <rdf:rest rdf:nodeID="A10"/>
+    <rdf:first rdf:nodeID="A18"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A13">
+    <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/lists/2008/09/11/list.owl#hasContents"/>
+    <owl:hasValue rdf:resource="#Receive"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.co-ode.org/ontologies/lists/2008/09/11/list.owl#hasContents">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#MyList">
+    <rdf:type rdf:resource="#OWLList"/>
+    <rdf:type rdf:nodeID="A26"/>
+    <rdf:type rdf:nodeID="A22"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A16">
+    <rdf:first rdf:nodeID="A27"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <rdf:rest rdf:nodeID="A28"/>
+    <rdf:first rdf:nodeID="A29"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#x">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A27">
+    <swrl:classPredicate rdf:resource="#NextState"/>
+    <swrl:argument1 rdf:resource="#y"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#z">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A29">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="#hasParameterName"/>
+    <swrl:argument2 rdf:resource="#SendTo"/>
+    <swrl:argument1 rdf:resource="#RegisterDF"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A30">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="#hasStateValue"/>
+    <swrl:argument2 rdf:resource="#C"/>
+    <swrl:argument1 rdf:resource="#y"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A8">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.co-ode.org/ontologies/lists/2008/09/11/list.owl#hasNext">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A31">
+    <swrl:propertyPredicate rdf:resource="#hasParameterValue"/>
+    <swrl:argument2 rdf:resource="#ReasonerAgent"/>
+    <swrl:argument1 rdf:resource="#SendTo"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A20">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="#State"/>
+    <swrl:argument1 rdf:resource="#x"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A24">
+    <rdf:first rdf:nodeID="A30"/>
+    <rdf:rest rdf:nodeID="A0"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A9">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A26">
+    <owl:hasValue rdf:resource="#NextItem"/>
+    <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/lists/2008/09/11/list.owl#hasNext"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A21">
+    <rdf:first rdf:nodeID="A14"/>
+    <rdf:rest rdf:nodeID="A32"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A32">
+    <rdf:first rdf:nodeID="A33"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#FindNext0">
+    <swrl:head rdf:nodeID="A25"/>
+    <swrl:body rdf:nodeID="A19"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A28">
+    <rdf:first rdf:nodeID="A31"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A33">
+    <swrl:classPredicate rdf:resource="#NextState"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:argument1 rdf:resource="#y"/>
+  </rdf:Description>
+</rdf:RDF>
