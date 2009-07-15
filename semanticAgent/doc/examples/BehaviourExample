@@ -1,0 +1,29 @@
+/***********************************************************/
+/*********************SEMANTIC AGENT ***********************/
+/***********************************************************/
+/************************EXAMPLE****************************/
+/***********************************************************/
+/*********************Behaviour Exchange********************/
+
+
+1/ What is this example doing ?
+
+This example shows behaviour exchanges between two agents, "AskAgent" and "AnswerAgent".
+Answer sends its behaviour encoded as a set of rules (Manchester Syntax encoding) to AskAgent.
+
+- Watch the message using the sniffer agent
+
+- Ouput of the example is in memory_init/answerBehaviourAfter.swrl
+
+Files :
+AskAgent
+- Config File : config/AskAgent.properties
+- Behaviour : memory_init/AskBehaviour.swrl
+
+AnswerAgent
+- Config File : config/AnswerAgent.properties
+- Behaviour : memory_init/AnswerBehaviour.swrl
+
+2/ How to run this example
+startBehaviour.bat (Windows)
+startBehaviour.sh (Linux)
