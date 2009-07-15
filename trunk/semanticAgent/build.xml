@@ -59,11 +59,11 @@
   
   </target>
   
-<property name="semanticAgent.jar" value="${dist}/lib/semanticAgent.jar.jar"/>	
+<property name="semanticAgent.jar" value="${dist}/lib/semanticAgent.jar"/>	
   
   
- <target name="start" depends="dist" description="Start the Demo">
-    <java classname="agent.demo.reasonerAgent.DemoAskBehaviour" fork="true" spawn="true">
+ <target name="startExampleBehaviour"  description="Behaviour Exchange">
+    <java classname="agent.demo.swrlagent.behaviour.DemoAskBehaviour">
     <arg line=""/>
   	<classpath>
      		<pathelement location="${semanticAgent.jar}"/>
@@ -75,7 +75,18 @@
 
 </target>
 
+	 <target name="startExampleConsistency" description="Start the Demo">
+	    <java classname="agent.demo.swrlagent.verification.DemoAskVerification">
+	    <arg line=""/>
+	  	<classpath>
+	     		<pathelement location="${semanticAgent.jar}"/>
+				<fileset dir="lib">
+	       			<include name="*.jar"/>
+	    		</fileset>	
+	  	</classpath>
+	    </java>
 
+	</target>
 	  
 <target name="doc" >   
     <echo level="warning" message="Creating Docs..." />

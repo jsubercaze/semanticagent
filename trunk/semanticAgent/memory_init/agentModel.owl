@@ -33,6 +33,7 @@
 	   
 	<owl:Class rdf:about="#ParameterType"/>
 	
+	<owl:Class rdf:about="#ParameterValue"/>
   	
   <owl:Class rdf:about="#Agent"/>
 
@@ -66,9 +67,15 @@
   <!-- Instances -->
   <dl-safe:ActionList rdf:about="#AL"/>
   <dl-safe:ParameterType rdf:about="#SendTo"/>
+  <dl-safe:ParameterType rdf:about="#PropertyName"/>
+  <dl-safe:ParameterType rdf:about="#PropertySubject"/>
+  <dl-safe:ParameterType rdf:about="#PropertyObject"/>
+  
+
   
   <dl-safe:Agent rdf:about="#ReasonerAgent"/>
   <dl-safe:Agent rdf:about="#AnswerAgent"/>
+
   
   <dl-safe:StateValue rdf:about="#BEGIN"/>
   <dl-safe:StateValue rdf:about="#A"/>

@@ -1,4 +1,4 @@
-package agent.demo.swrlagent;
+package agent.demo.swrlagent.behaviour;
 
 import java.io.BufferedReader;
 import java.io.IOException;

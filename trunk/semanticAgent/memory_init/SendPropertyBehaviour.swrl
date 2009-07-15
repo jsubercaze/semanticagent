@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF [
+  <!ENTITY dl-safe "http://liris.cnrs.fr/julien.subercaze/ontologies/agentModel.owl#">
+  <!ENTITY swrl  "http://www.w3.org/2003/11/swrl#" >
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+  <!ENTITY ruleml  "http://www.w3.org/2003/11/ruleml#" >
+]>
+<rdf:RDF xml:base="http://liris.cnrs.fr/julien.subercaze/ontologies/SendProperty.swrl#" xmlns:dl-safe="http://liris.cnrs.fr/julien.subercaze/ontologies/agentModel.owl#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:swrl="http://www.w3.org/2003/11/swrl#" xmlns:ruleml="http://www.w3.org/2003/11/ruleml#">
+
+  
+   
+   
+ 	<dl-safe:OWLList rdf:about="#MyList">
+	 	<rdf:type>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/lists/2008/09/11/list.owl#hasContents"/>
+						<owl:hasValue rdf:resource="http://liris.cnrs.fr/julien.subercaze/ontologies/agentModel.owl#RegisterDF"/>
+				</owl:Restriction>
+			</rdf:type>
+			<rdf:type>
+				<owl:Restriction>
+				<owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/lists/2008/09/11/list.owl#hasNext"/>
+						<owl:hasValue rdf:resource="#NextItem"/>
+				</owl:Restriction>		
+		</rdf:type>
+  </dl-safe:OWLList>
+
+  <dl-safe:OWLList rdf:about="#NextItem">
+	 	<rdf:type>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/lists/2008/09/11/list.owl#hasContents"/>
+						<owl:hasValue rdf:resource="http://liris.cnrs.fr/julien.subercaze/ontologies/agentModel.owl#SendProperty"/>
+				</owl:Restriction>
+			</rdf:type>
+			
+			<rdf:type>
+				<owl:Restriction>
+				<owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/lists/2008/09/11/list.owl#hasNext"/>
+						<owl:hasValue rdf:resource="http://liris.cnrs.fr/julien.subercaze/ontologies/agentModel.owl#finListe"/>
+				</owl:Restriction>		
+		</rdf:type>
+  </dl-safe:OWLList>
+  
+  <dl-safe:OWLList rdf:about="#OtherItem">
+	 	<rdf:type>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/lists/2008/09/11/list.owl#hasContents"/>
+						<owl:hasValue rdf:resource="http://liris.cnrs.fr/julien.subercaze/ontologies/agentModel.owl#Receive"/>
+				</owl:Restriction>
+			</rdf:type>
+			<rdf:type>
+				<owl:Restriction>
+				<owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/lists/2008/09/11/list.owl#hasNext"/>
+						<owl:hasValue rdf:resource="http://liris.cnrs.fr/julien.subercaze/ontologies/agentModel.owl#finListe"/>
+				</owl:Restriction>		
+		</rdf:type>
+  </dl-safe:OWLList>
+	
+  
+
+	
+	<owl:Thing rdf:about="#AgentP"/>
+ <!-- Rules -->
+
+	<swrl:Variable rdf:about="#x"/>
+  <swrl:Variable rdf:about="#y"/>
+  <swrl:Variable rdf:about="#z"/>
+  
+	<swrl:Imp rdf:about="#FindNext">
+	 <swrl:body rdf:parseType="Collection">
+	   <swrl:ClassAtom>
+				<swrl:classPredicate rdf:resource="http://liris.cnrs.fr/julien.subercaze/ontologies/agentModel.owl#State"/>
+				<swrl:argument1 rdf:resource="#x"/>
+			</swrl:ClassAtom>
+	   <swrl:IndividualPropertyAtom>
+				<swrl:propertyPredicate rdf:resource="http://liris.cnrs.fr/julien.subercaze/ontologies/agentModel.owl#hasStateValue"/>
+				<swrl:argument1 rdf:resource="#x"/>
+				<swrl:argument2 rdf:resource="http://liris.cnrs.fr/julien.subercaze/ontologies/agentModel.owl#BEGIN"/>
+     </swrl:IndividualPropertyAtom>
+     	<swrl:ClassAtom>
+				<swrl:classPredicate rdf:resource="http://liris.cnrs.fr/julien.subercaze/ontologies/agentModel.owl#NextState"/>
+				<swrl:argument1 rdf:resource="#y"/>
+			</swrl:ClassAtom>			
+	 </swrl:body>
+   <swrl:head rdf:parseType="Collection">
+      <swrl:IndividualPropertyAtom>
+				<swrl:propertyPredicate rdf:resource="http://liris.cnrs.fr/julien.subercaze/ontologies/agentModel.owl#hasStateValue"/>
+        <swrl:argument1 rdf:resource="#y"/>
+        <swrl:argument2 rdf:resource="http://liris.cnrs.fr/julien.subercaze/ontologies/agentModel.owl#C"/>	   		 		
+      </swrl:IndividualPropertyAtom>
+      <swrl:IndividualPropertyAtom>
+				<swrl:propertyPredicate rdf:resource="http://liris.cnrs.fr/julien.subercaze/ontologies/agentModel.owl#hasList"/>
+        <swrl:argument1 rdf:resource="http://liris.cnrs.fr/julien.subercaze/ontologies/agentModel.owl#AL"/>
+        <swrl:argument2 rdf:resource="#MyList"/>	   		 		
+      </swrl:IndividualPropertyAtom>
+      <swrl:IndividualPropertyAtom>
+				<swrl:propertyPredicate rdf:resource="http://liris.cnrs.fr/julien.subercaze/ontologies/agentModel.owl#hasParameterName"/>
+        <swrl:argument1 rdf:resource="http://liris.cnrs.fr/julien.subercaze/ontologies/agentModel.owl#SendProperty"/>
+        <swrl:argument2 rdf:resource="http://liris.cnrs.fr/julien.subercaze/ontologies/agentModel.owl#SendTo"/>	   		 		
+      </swrl:IndividualPropertyAtom>
+       <swrl:IndividualPropertyAtom>
+				<swrl:propertyPredicate rdf:resource="http://liris.cnrs.fr/julien.subercaze/ontologies/agentModel.owl#hasParameterValue"/>
+        <swrl:argument1 rdf:resource="http://liris.cnrs.fr/julien.subercaze/ontologies/agentModel.owl#SendTo"/>
+        <swrl:argument2 rdf:resource="#VerifyAgent"/>	   		 		
+      </swrl:IndividualPropertyAtom>
+      <swrl:IndividualPropertyAtom>
+				<swrl:propertyPredicate rdf:resource="http://liris.cnrs.fr/julien.subercaze/ontologies/agentModel.owl#hasParameterName"/>
+        <swrl:argument1 rdf:resource="http://liris.cnrs.fr/julien.subercaze/ontologies/agentModel.owl#SendProperty"/>
+        <swrl:argument2 rdf:resource="http://liris.cnrs.fr/julien.subercaze/ontologies/agentModel.owl#PropertyName"/>	   		 		
+      </swrl:IndividualPropertyAtom>
+       <swrl:IndividualPropertyAtom>
+				<swrl:propertyPredicate rdf:resource="http://liris.cnrs.fr/julien.subercaze/ontologies/agentModel.owl#hasParameterValue"/>
+        <swrl:argument1 rdf:resource="http://liris.cnrs.fr/julien.subercaze/ontologies/agentModel.owl#PropertyName"/>
+        <swrl:argument2 rdf:resource="http://xmlns.com/foaf/0.1/mbox"/>	   		 		
+      </swrl:IndividualPropertyAtom>
+    <swrl:IndividualPropertyAtom>
+				<swrl:propertyPredicate rdf:resource="http://liris.cnrs.fr/julien.subercaze/ontologies/agentModel.owl#hasParameterName"/>
+        <swrl:argument1 rdf:resource="http://liris.cnrs.fr/julien.subercaze/ontologies/agentModel.owl#SendProperty"/>
+        <swrl:argument2 rdf:resource="http://liris.cnrs.fr/julien.subercaze/ontologies/agentModel.owl#PropertyObject"/>	   		 		
+      </swrl:IndividualPropertyAtom>
+       <swrl:IndividualPropertyAtom>
+				<swrl:propertyPredicate rdf:resource="http://liris.cnrs.fr/julien.subercaze/ontologies/agentModel.owl#hasParameterValue"/>
+        <swrl:argument1 rdf:resource="http://liris.cnrs.fr/julien.subercaze/ontologies/agentModel.owl#PropertyObject"/>
+        <swrl:argument2 rdf:resource="mailto:kolovski@cs.umd.edu"/>	   		 		
+      </swrl:IndividualPropertyAtom>
+      <swrl:IndividualPropertyAtom>
+				<swrl:propertyPredicate rdf:resource="http://liris.cnrs.fr/julien.subercaze/ontologies/agentModel.owl#hasParameterName"/>
+        <swrl:argument1 rdf:resource="http://liris.cnrs.fr/julien.subercaze/ontologies/agentModel.owl#SendProperty"/>
+        <swrl:argument2 rdf:resource="http://liris.cnrs.fr/julien.subercaze/ontologies/agentModel.owl#PropertySubject"/>	   		 		
+      </swrl:IndividualPropertyAtom>
+       <swrl:IndividualPropertyAtom>
+				<swrl:propertyPredicate rdf:resource="http://liris.cnrs.fr/julien.subercaze/ontologies/agentModel.owl#hasParameterValue"/>
+        <swrl:argument1 rdf:resource="http://liris.cnrs.fr/julien.subercaze/ontologies/agentModel.owl#PropertySubject"/>
+        <swrl:argument2 rdf:resource="http://www.mindswap.org/2004/owl/mindswappers#Christian.Halaschek"/>	   		 		
+      </swrl:IndividualPropertyAtom>
+	 </swrl:head>
+	</swrl:Imp>
+	
+	<swrl:Imp rdf:about="#FindNext2">
+	 <swrl:body rdf:parseType="Collection">
+	   <swrl:ClassAtom>
+				<swrl:classPredicate rdf:resource="http://liris.cnrs.fr/julien.subercaze/ontologies/agentModel.owl#State"/>
+				<swrl:argument1 rdf:resource="#x"/>
+			</swrl:ClassAtom>
+	   <swrl:IndividualPropertyAtom>
+				<swrl:propertyPredicate rdf:resource="http://liris.cnrs.fr/julien.subercaze/ontologies/agentModel.owl#hasStateValue"/>
+				<swrl:argument1 rdf:resource="#x"/>
+				<swrl:argument2 rdf:resource="http://liris.cnrs.fr/julien.subercaze/ontologies/agentModel.owl#C"/>
+     </swrl:IndividualPropertyAtom>
+     	<swrl:ClassAtom>
+				<swrl:classPredicate rdf:resource="http://liris.cnrs.fr/julien.subercaze/ontologies/agentModel.owl#NextState"/>
+				<swrl:argument1 rdf:resource="#y"/>
+			</swrl:ClassAtom>
+			
+	 </swrl:body>
+   <swrl:head rdf:parseType="Collection">
+      <swrl:IndividualPropertyAtom>
+				<swrl:propertyPredicate rdf:resource="http://liris.cnrs.fr/julien.subercaze/ontologies/agentModel.owl#hasStateValue"/>
+        <swrl:argument1 rdf:resource="#y"/>
+        <swrl:argument2 rdf:resource="http://liris.cnrs.fr/julien.subercaze/ontologies/agentModel.owl#END"/>	   		 		
+      </swrl:IndividualPropertyAtom>
+      <swrl:IndividualPropertyAtom>
+				<swrl:propertyPredicate rdf:resource="http://liris.cnrs.fr/julien.subercaze/ontologies/agentModel.owl#hasList"/>
+        <swrl:argument1 rdf:resource="http://liris.cnrs.fr/julien.subercaze/ontologies/agentModel.owl#AL"/>
+        <swrl:argument2 rdf:resource="#OtherItem"/>	   		 		
+      </swrl:IndividualPropertyAtom>
+	 </swrl:head>
+	</swrl:Imp> 
+	
+	
+</rdf:RDF>

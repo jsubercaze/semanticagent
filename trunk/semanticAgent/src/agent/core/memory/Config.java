@@ -13,6 +13,7 @@ import org.apache.log4j.Logger;
  */
 public class Config {
 
+	
 	private static Logger log = Logger.getLogger(Config.class.getName());
 	/**
 	 * Properties file
@@ -45,6 +46,8 @@ public class Config {
 			OUTPUT_FILE = config.getProperty("OUTPUT_FILE");
 			BASE = config.getProperty("BASE");
 			SOURCE_FILE = config.getProperty("SOURCE_FILE");
+			KNOWLEDGE_BASE = config.getProperty("KNOWLEDGE_BASE");
+			KNOWLEDGE = config.getProperty("KNOWLEDGE");
 		} catch (Exception e) {
 			log.error("Cannot load properties from " + propertyFile, e);
 		}
@@ -117,5 +120,9 @@ public class Config {
 	public String BASE = "";
 
 	public String SOURCE_FILE = "";
+	
+	public String KNOWLEDGE_BASE = "";
+	
+	public String KNOWLEDGE = "";
 
 }
