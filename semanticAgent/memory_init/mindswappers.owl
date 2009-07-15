@@ -1,0 +1,522 @@
+<?xml version="1.0"?>
+<!DOCTYPE rdf:RDF [
+  <!ENTITY swap "http://www.mindswap.org/2003/owl/mindswap#" >
+  <!ENTITY foaf "http://xmlns.com/foaf/0.1/">
+]>
+<rdf:RDF 
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:foaf="&foaf;"
+    xmlns:ms="&swap;"
+    xml:base="http://www.mindswap.org/2004/owl/mindswappers#"
+>
+<owl:Ontology rdf:about="" rdfs:label="Mindswappers">
+  <rdfs:comment>List of current and former Mindswappers</rdfs:comment>
+  <owl:imports>
+    <owl:Ontology rdf:about="http://www.mindswap.org/2003/owl/mindswap"/>
+  </owl:imports>
+</owl:Ontology>
+
+
+<!-- Faculty -->
+<ms:Faculty rdf:ID="Jim.Hendler" rdfs:label="Jim Hendler">
+  <foaf:name>Jim Hendler</foaf:name>
+  <foaf:mbox>
+    <owl:Thing rdf:about="mailto:hendler@cs.umd.edu"/>
+  </foaf:mbox>
+  <foaf:workInfoHomepage>
+    <foaf:Document rdf:about="http://www.cs.umd.edu/~hendler/"/>
+  </foaf:workInfoHomepage>
+</ms:Faculty>
+
+
+<!-- Researchers -->
+<ms:Researcher rdf:ID="Jennifer.Golbeck" rdfs:label="Jennifer Golbeck">
+  <rdfs:seeAlso rdf:resource="http://www.cs.umd.edu/~golbeck/daml/golbeckFOAF.rdf"/>
+  <foaf:name>Jennifer Golbeck</foaf:name>
+  <foaf:mbox>
+    <owl:Thing rdf:about="mailto:golbeck@cs.umd.edu"/>
+  </foaf:mbox>
+  <foaf:homepage>
+    <foaf:Document rdf:about="http://www.cs.umd.edu/~golbeck/"/>
+  </foaf:homepage>
+  <foaf:workInfoHomepage>
+    <foaf:Document rdf:about="http://www.mindswap.org/~golbeck/"/>
+  </foaf:workInfoHomepage>
+</ms:Researcher>
+
+<ms:Researcher rdf:ID="Bijan.Parsia" rdfs:label="Bijan Parsia">
+  <foaf:name>Bijan Parsia</foaf:name>
+  <foaf:mbox>
+    <owl:Thing rdf:about="mailto:bparsia@isr.umd.edu"/>
+  </foaf:mbox>
+  <foaf:homepage>
+    <foaf:Document rdf:about="http://www.unc.edu/~bparsia/"/>
+  </foaf:homepage>
+  <foaf:workInfoHomepage>
+    <foaf:Document rdf:about="http://www.mindswap.org/~bparsia/"/>
+  </foaf:workInfoHomepage>
+</ms:Researcher>
+
+<ms:Researcher rdf:ID="David_Wood" rdfs:label="David Wood">
+  <foaf:name>David Wood</foaf:name>
+  <foaf:mbox>
+    <owl:Thing rdf:about="mailto:dwood@mindswap.org"/>
+  </foaf:mbox>
+  <foaf:homepage>
+    <foaf:Document rdf:about="http://www.mindswap.org/~dwood/"/>
+  </foaf:homepage>
+  <foaf:workInfoHomepage>
+    <foaf:Document rdf:about="http://www.mindswap.org/~dwood/"/>
+  </foaf:workInfoHomepage>
+</ms:Researcher>
+
+<!-- Programmers -->
+<ms:Programmer rdf:ID="Amy.Alford" rdfs:label="Amy Alford">
+  <rdfs:seeAlso rdf:resource="http://sarn.org/foaf.rdf"/>
+  <foaf:name>Amy Alford</foaf:name>
+  <foaf:mbox>
+    <owl:Thing rdf:about="mailto:aloomis@glue.umd.edu"/>
+  </foaf:mbox>
+  <foaf:homepage>
+    <foaf:Document rdf:about="http://www.sarn.org/"/>
+  </foaf:homepage>
+  <foaf:workInfoHomepage>
+    <foaf:Document rdf:about="http://www.mindswap.org/~aloomis/"/>
+  </foaf:workInfoHomepage>
+</ms:Programmer>
+
+<ms:Programmer rdf:ID="Ron.Alford" rdfs:label="Ron Alford">
+  <rdfs:seeAlso rdf:resource="http://volus.net/~ronwalf/foaf.rdf"/>
+  <foaf:name>Ron Alford</foaf:name>
+  <foaf:mbox>
+    <owl:Thing rdf:about="mailto:ronwalf@umd.edu"/>
+  </foaf:mbox>
+  <foaf:mbox>
+    <owl:Thing rdf:about="mailto:ronwalf@volus.net"/>
+  </foaf:mbox>
+  <foaf:mbox>
+    <owl:Thing rdf:about="mailto:ronwalf@glue.umd.edu"/>
+  </foaf:mbox>
+  <foaf:mbox>
+    <owl:Thing rdf:about="mailto:ronwalf@wam.umd.edu"/>
+  </foaf:mbox>
+  <foaf:homepage>
+    <foaf:Document rdf:about="http://volus.net/~ronwalf/"/>
+  </foaf:homepage>
+  <foaf:workInfoHomepage>
+    <foaf:Document rdf:about="http://www.mindswap.org/~ronwalf/"/>
+  </foaf:workInfoHomepage>
+</ms:Programmer>
+
+<ms:Programmer rdf:ID="Kendall.Clark" rdfs:label="Kendall Clark">
+  <rdfs:seeAlso rdf:resource="http://clark.dallas.tx.us/kendall/foaf.rdf"/>
+  <foaf:name>Kendall Grant Clark</foaf:name>
+  <foaf:mbox>
+    <owl:Thing rdf:about="mailto:kendall@monkeyfist.com"/>
+  </foaf:mbox>
+  <foaf:homepage>
+    <foaf:Document rdf:about="http://clark.dallas.tx.us/kendall/"/>
+  </foaf:homepage>
+<!--
+  <foaf:workInfoHomepage>
+    <foaf:Document rdf:about="http://www.mindswap.org/~kendall/"/>
+  </foaf:workInfoHomepage>
+-->
+</ms:Programmer>
+
+<ms:Programmer rdf:ID="Mike.Grove" rdfs:label="Mike Grove">
+  <foaf:name>Mike Grove</foaf:name>
+  <foaf:mbox>
+    <owl:Thing rdf:about="mailto:mhgrove@hotmail.com"/>
+  </foaf:mbox>
+</ms:Programmer>
+
+<ms:Programmer rdf:ID="Daniel.Krech" rdfs:label="Daniel Krech">
+  <rdfs:seeAlso rdf:resource="http://eikeon.com/foaf.rdf"/>
+  <foaf:name>Daniel Krech</foaf:name>
+  <foaf:mbox>
+    <owl:Thing rdf:about="mailto:eikeon@eikeon.com"/>
+  </foaf:mbox>
+  <foaf:homepage>
+    <foaf:Document rdf:about="http://eikeon.com/"/>
+  </foaf:homepage>
+  <foaf:workInfoHomepage>
+    <foaf:Document rdf:about="http://eikeon.com/"/>
+  </foaf:workInfoHomepage>
+</ms:Programmer>
+
+
+<!-- Graduate Students -->
+
+<ms:GraduateStudent rdf:ID="Hamid_Haidarian-Shahri" rdfs:label="Hamid Haidarian-Shahri">
+  <foaf:name>Hamid Haidarian-Shahri</foaf:name>
+  <foaf:mbox>
+    <owl:Thing rdf:about="mailto:hamid@cs.umd.edu"/>
+  </foaf:mbox>
+</ms:GraduateStudent>
+
+<ms:GraduateStudent rdf:ID="Christian.Halaschek" rdfs:label="Christian Halaschek">
+  <foaf:name>Christian Halaschek-Wiener</foaf:name>
+  <foaf:mbox>
+    <owl:Thing rdf:about="mailto:halasche@cs.umd.edu"/>
+  </foaf:mbox>
+  <foaf:workInfoHomepage>
+    <foaf:Document rdf:about="http://www.mindswap.org/~chris/"/>
+  </foaf:workInfoHomepage>
+</ms:GraduateStudent>
+
+<ms:GraduateStudent rdf:ID="Debbie.Heisler" rdfs:label="Debbie Heisler">
+  <foaf:name>Debbie Heisler</foaf:name>
+  <foaf:mbox>
+    <owl:Thing rdf:about="mailto:heisler@cs.umd.edu"/>
+  </foaf:mbox>
+</ms:GraduateStudent>
+
+<ms:GraduateStudent rdf:ID="Aditya.Kalyanpur" rdfs:label="Aditya Kalyanpur">
+  <rdfs:seeAlso rdf:resource="http://www.ece.umd.edu/~adityak/aditya_foaf.rdf"/>
+  <foaf:name>Aditya Kalyanpur</foaf:name>
+  <foaf:mbox>
+    <owl:Thing rdf:about="mailto:adityak@wam.umd.edu"/>
+  </foaf:mbox>
+  <foaf:mbox>
+    <owl:Thing rdf:about="mailto:aditkal@yahoo.com"/>
+  </foaf:mbox>
+  <!--
+  <foaf:homepage>
+    <foaf:Document rdf:about="http://"/>
+  </foaf:homepage>
+  -->
+  <foaf:workInfoHomepage>
+    <foaf:Document rdf:about="http://www.mindswap.org/~aditkal/"/>
+  </foaf:workInfoHomepage>
+</ms:GraduateStudent>
+
+
+<ms:GraduateStudent rdf:ID="Vladimir_Kolovski" rdfs:label="Vladimir Kolovski">
+  <foaf:name>Vladimir Kolovski</foaf:name>
+  <foaf:mbox>
+    <owl:Thing rdf:about="mailto:kolovski@cs.umd.edu"/>
+  </foaf:mbox>
+</ms:GraduateStudent>
+
+<ms:Researcher rdf:ID="Ugur_Kuter" rdfs:label="Ugur Kuter">
+  <foaf:name>Ugur Kuter</foaf:name>
+  <foaf:mbox>
+    <owl:Thing rdf:about="mailto:ukuter@cs.umd.edu"/>
+  </foaf:mbox>
+</ms:Researcher>
+
+<ms:GraduateStudent rdf:ID="Naiwen.Lin" rdfs:label="Naiwen Lin">
+  <foaf:name>Naiwen Lin</foaf:name>
+  <foaf:mbox>
+    <owl:Thing rdf:about="mailto:nwlin@cs.umd.edu"/>
+  </foaf:mbox>
+</ms:GraduateStudent>
+
+<ms:GraduateStudent rdf:ID="Evren.Sirin" rdfs:label="Evren Sirin">
+  <rdfs:seeAlso rdf:resource="http://www.mindswap.org/~evren/foaf.rdf"/>
+  <foaf:name>Evren Sirin</foaf:name>
+  <foaf:mbox>
+    <owl:Thing rdf:about="mailto:evren@cs.umd.edu"/>
+  </foaf:mbox>
+  <foaf:workInfoHomepage>
+    <foaf:Document rdf:about="http://www.mindswap.org/~evren/"/>
+  </foaf:workInfoHomepage>
+</ms:GraduateStudent>
+
+<ms:GraduateStudent rdf:ID="Dave.Wang" rdfs:label="Taowei David Wang">
+  <foaf:name>Taowei David Wang</foaf:name>
+  <foaf:mbox>
+    <owl:Thing rdf:about="mailto:tw7@cs.umd.edu"/>
+  </foaf:mbox>
+</ms:GraduateStudent>
+
+<ms:GraduateStudent rdf:ID="Bin.Zhao" rdfs:label="Bin Zhao">
+  <foaf:name>Bin Zhao</foaf:name>
+  <foaf:mbox>
+    <owl:Thing rdf:about="mailto:bzhao@cs.umd.edu"/>
+  </foaf:mbox>
+  <foaf:workInfoHomepage>
+    <foaf:Document rdf:about="http://www.mindswap.org/~bzhao/"/>
+  </foaf:workInfoHomepage>
+</ms:GraduateStudent>
+
+
+<!-- Undergraduates -->
+<ms:UndergraduateStudent rdf:ID="Jordan.Katz" rdfs:label="Jordan Katz">
+  <rdfs:seeAlso rdf:resource="http://www.mindswap.org/~katz/foaf.rdf"/>
+  <foaf:name>Jordan Katz</foaf:name>
+  <foaf:mbox>
+    <owl:Thing rdf:about="mailto:katz@underlevel.net"/>
+  </foaf:mbox>
+  <foaf:homepage>
+    <foaf:Document rdf:about="http://underlevel.net/jordan/"/>
+  </foaf:homepage>
+  <foaf:workInfoHomepage>
+    <foaf:Document rdf:about="http://www.mindswap.org/~katz/"/>
+  </foaf:workInfoHomepage>
+</ms:UndergraduateStudent>
+
+<ms:UndergraduateStudent rdf:ID="Chris.Testa" rdfs:label="Chris Testa">
+  <foaf:name>Chris Testa</foaf:name>
+  <foaf:mbox>
+    <owl:Thing rdf:about="mailto:testac@umd.edu"/>
+  </foaf:mbox>
+</ms:UndergraduateStudent>
+
+<!-- Affiliates -->
+<ms:Affiliate rdf:ID="Aaron.Mannes" rdfs:label="Aaron Mannes">
+  <foaf:name>Aaron Mannes</foaf:name>
+  <foaf:mbox>
+    <owl:Thing rdf:about="mailto:awmannes@comcast.net"/>
+  </foaf:mbox>
+  <foaf:homepage>
+    <foaf:Document rdf:about="http://www.terrorprofiles.com/"/>
+  </foaf:homepage>
+</ms:Affiliate>
+
+<!-- Visitors -->
+<ms:Visitor rdf:ID="Andrew.Schain" rdfs:label="Andrew Schain">
+  <rdfs:seeAlso rdf:resource="http://www.mindswap.org/~schain/foaf.rdf"/>
+  <foaf:name>Andrew Schain</foaf:name>
+  <foaf:mbox>
+    <owl:Thing rdf:about="mailto:andrew@schain.org"/>
+  </foaf:mbox>
+  <foaf:workInfoHomepage>
+    <foaf:Document rdf:about="http://www.hq.nasa.gov/"/>
+  </foaf:workInfoHomepage>
+
+  <foaf:homepage>
+    <foaf:Document rdf:about="http://www.schain.org/"/>
+  </foaf:homepage>
+  <foaf:depiction>
+    <foaf:Image rdf:about="http://www.mindswap.org/2004/images/2004-09/schain_professional"/>
+  </foaf:depiction>
+</ms:Visitor>
+
+<ms:Visitor rdf:ID="Chris.Shenton" rdfs:label="Chris Shenton">
+  <foaf:name>Chris Shenton</foaf:name>
+  <foaf:mbox>
+    <owl:Thing rdf:about="mailto:chris@shenton.org"/>
+  </foaf:mbox>
+  <foaf:mbox>
+    <owl:Thing rdf:about="mailto:Chris.Shenton@hq.nasa.gov"/>
+  </foaf:mbox>
+  <foaf:homepage>
+    <foaf:Document rdf:about="http://chris.shenton.org/"/>
+  </foaf:homepage>
+</ms:Visitor>
+
+<!-- Alumni -->
+<ms:Alumni rdf:ID="Ross.Baker" rdfs:label="Ross Baker">
+  <foaf:name>Ross Baker</foaf:name>
+  <foaf:mbox>
+    <owl:Thing rdf:about="mailto:roark@wam.umd.edu"/>
+  </foaf:mbox>
+</ms:Alumni>
+
+<ms:Alumni rdf:ID="Jay.Banerjee" rdfs:label="Jay Banerjee">
+  <foaf:name>Jay Banerjee</foaf:name>
+  <foaf:mbox>
+    <owl:Thing rdf:about="mailto:dbanerje@umd.edu"/>
+  </foaf:mbox>
+</ms:Alumni>
+
+<ms:Alumni rdf:ID="Bernardo.Cuenca" rdfs:label="Bernardo Cuenca">
+  <foaf:name>Bernardo Cuenca</foaf:name>
+  <foaf:mbox>
+    <owl:Thing rdf:about="mailto:Bernardo.Cuenca@uv.es"/>
+  </foaf:mbox>
+  <foaf:mbox>
+    <owl:Thing rdf:about="mailto:bernardo@mindswap.org"/>
+  </foaf:mbox>
+  <foaf:mbox>
+    <owl:Thing rdf:about="mailto:bernardo@mindlab.umd.edu"/>
+  </foaf:mbox>
+  <foaf:workInfoHomepage>
+    <foaf:Document rdf:about="http://www.mindswap.org/~bernardo/"/>
+  </foaf:workInfoHomepage>
+</ms:Alumni>
+
+<ms:Alumni rdf:ID="Nada.Hashmi" rdfs:label="Nada Hashmi">
+  <foaf:name>Nada Hashmi</foaf:name>
+  <foaf:mbox>
+    <owl:Thing rdf:about="mailto:nada@cs.umd.edu"/>
+  </foaf:mbox>
+  <foaf:homepage>
+    <foaf:Document rdf:about="http://www.cs.umd.edu/~nada/"/>
+  </foaf:homepage>
+  <foaf:workInfoHomepage>
+    <foaf:Document rdf:about="http://www.mindswap.org/~nada/"/>
+  </foaf:workInfoHomepage>
+</ms:Alumni>
+
+<ms:Alumni rdf:ID="Daniel.Hewlett" rdfs:label="Daniel Hewlett">
+  <foaf:name>Daniel Hewlett</foaf:name>
+  <foaf:mbox>
+    <owl:Thing rdf:about="mailto:dhewlett@umd.edu"/>
+  </foaf:mbox>
+</ms:Alumni>
+
+<ms:Alumni rdf:ID="Kaoru.Hiramatsu" rdfs:label="Kaoru Hiramatsu">
+  <foaf:name>Kaoru Hiramatsu</foaf:name>
+  <foaf:mbox>
+    <owl:Thing rdf:about="mailto:hiramatu@umiacs.umd.edu"/>
+  </foaf:mbox>
+</ms:Alumni>
+
+<ms:Alumni rdf:ID="Anant.Kaushiva" rdfs:label="Anant Kaushiva">
+  <foaf:name>Anant Kaushiva</foaf:name>
+  <foaf:mbox>
+    <owl:Thing rdf:about="mailto:anant@mindswap.org"/>
+  </foaf:mbox>
+  <foaf:homepage>
+    <foaf:Document rdf:about="http://anant.kaushiva.com/"/>
+  </foaf:homepage>
+  <foaf:workInfoHomepage>
+    <foaf:Document rdf:about="http://www.mindswap.org/~anant/"/>
+  </foaf:workInfoHomepage>
+</ms:Alumni>
+
+<ms:Alumni rdf:ID="Hidenari.Kiyomitsu" rdfs:label="Hidenari Kiyomitsu">
+  <foaf:name>Hidenari Kiyomitsu</foaf:name>
+  <foaf:mbox>
+    <owl:Thing rdf:about="mailto:kiyomitu@kobe-u.ac.jp"/>
+  </foaf:mbox>
+  <foaf:workInfoHomepage>
+    <foaf:Document rdf:about="http://www.db.cla.kobe-u.ac.jp/~kiyomitu/"/>
+  </foaf:workInfoHomepage>
+</ms:Alumni>
+
+<ms:Alumni rdf:ID="Grecia.Lapizco-Encinas" rdfs:label="Grecia C. Lapizco-Encinas">
+  <foaf:name>Grecia C. Lapizco-Encinas</foaf:name>
+  <foaf:mbox>
+    <owl:Thing rdf:about="mailto:glapizco@umd.edu"/>
+  </foaf:mbox>
+  <foaf:workInfoHomepage>
+    <foaf:Document rdf:about="http://www.mindswap.org/~glapizco/"/>
+  </foaf:workInfoHomepage>
+</ms:Alumni>
+
+<ms:Alumni rdf:ID="Meem.Mahmud" rdfs:label="Meem Mahmud">
+  <foaf:name>Meem Mahmud</foaf:name>
+  <foaf:mbox>
+    <owl:Thing rdf:about="mailto:mmahmud@umd.edu"/>
+  </foaf:mbox>
+  <foaf:mbox>
+    <owl:Thing rdf:about="mailto:mmahmud@wam.umd.edu"/>
+  </foaf:mbox>
+</ms:Alumni>
+
+<ms:Alumni rdf:ID="Katy.Newton" rdfs:label="Katy Newton">
+  <foaf:name>Katy Newton</foaf:name>
+  <foaf:mbox>
+    <owl:Thing rdf:about="mailto:katyn@wam.umd.edu"/>
+  </foaf:mbox>
+</ms:Alumni>
+
+<ms:Alumni rdf:ID="Ron.Reck" rdfs:label="Ron Reck">
+  <foaf:name>Ronald P. Reck</foaf:name>
+  <foaf:mbox>
+    <owl:Thing rdf:about="mailto:rreck@iama.rrecktek.com"/>
+  </foaf:mbox>
+</ms:Alumni>
+
+<ms:Alumni rdf:ID="Femke.Reitsma" rdfs:label="Femke Reitsma">
+  <foaf:name>Femke Reitsma</foaf:name>
+  <foaf:mbox>
+    <owl:Thing rdf:about="mailto:femke@umd.edu"/>
+  </foaf:mbox>
+  <foaf:mbox>
+    <owl:Thing rdf:about="mailto:femke@geog.umd.edu"/>
+  </foaf:mbox>
+</ms:Alumni>
+
+<ms:Alumni rdf:ID="Edna.Ruckhaus" rdfs:label="Edna Ruckhaus">
+  <foaf:name>Edna Ruckhaus</foaf:name>
+  <foaf:mbox>
+    <owl:Thing rdf:about="mailto:ruckhaus@ldc.usb.ve"/>
+  </foaf:mbox>
+  <foaf:homepage>
+    <foaf:Document rdf:about="http://www.ldc.usb.ve/~ruckhaus/"/>
+  </foaf:homepage>
+</ms:Alumni>
+
+<ms:Alumni rdf:ID="Yvonne.Shashoua" rdfs:label="Yvonne Sashoua">
+  <foaf:name>Yvonne Shashoua</foaf:name>
+  <foaf:mbox>
+    <owl:Thing rdf:about="mailto:yvonne@mindswap.org"/>
+  </foaf:mbox>
+</ms:Alumni>
+
+<ms:Alumni rdf:ID="Matt.Westhoff" rdfs:label="Matt Westoff">
+  <foaf:name>Matt Westhoff</foaf:name>
+  <foaf:mbox>
+    <owl:Thing rdf:about="mailto:matt2718@hotmail.com"/>
+  </foaf:mbox>
+</ms:Alumni>
+
+<!-- Template
+<ms: rdf:ID="" rdfs:label="">
+  <rdfs:seeAlso rdf:resource=""/>
+  <foaf:name></foaf:name>
+  <foaf:mbox>
+    <owl:Thing rdf:about="mailto:"/>
+  </foaf:mbox>
+  <foaf:homepage>
+    <foaf:Document rdf:about="http://"/>
+  </foaf:homepage>
+  <foaf:workInfoHomepage>
+    <foaf:Document rdf:about="http://www.mindswap.org/"/>
+  </foaf:workInfoHomepage>
+</ms:>
+-->
+
+<owl:AllDifferent>
+  <owl:distinctMembers rdf:parseType="Collection">
+    <foaf:Person rdf:about="#Amy.Alford"/>
+    <foaf:Person rdf:about="#Ron.Alford"/>
+    <foaf:Person rdf:about="#Ross.Baker"/>
+    <foaf:Person rdf:about="#Jay.Banerjee"/>
+    <foaf:Person rdf:about="#Kendall.Clark"/>
+    <foaf:Person rdf:about="#Bernardo.Cuenca"/>
+    <foaf:Person rdf:about="#Jennifer.Golbeck"/>
+    <foaf:Person rdf:about="#Mike.Grove"/>
+    <foaf:Person rdf:about="#Hamid_Haidarian-Shahri"/>
+    <foaf:Person rdf:about="#Christian.Halaschek"/>
+    <foaf:Person rdf:about="#Nada.Hashmi"/>
+    <foaf:Person rdf:about="#Debbie.Heisler"/>
+    <foaf:Person rdf:about="#Jim.Hendler"/>
+    <foaf:Person rdf:about="#Daniel.Hewlett"/>
+    <foaf:Person rdf:about="#Kaoru.Hiramatsu"/>
+    <foaf:Person rdf:about="#Aditya.Kalyanpur"/>
+    <foaf:Person rdf:about="#Jordan.Katz"/>
+    <foaf:Person rdf:about="#Anant.Kaushiva"/>
+    <foaf:Person rdf:about="#Hidenari.Kiyomitsu"/>
+    <foaf:Person rdf:about="#Vladimir_Kolovski"/>
+    <foaf:Person rdf:about="#Daniel.Krech"/>
+    <foaf:Person rdf:about="#Ugur_Kuter"/>
+    <foaf:Person rdf:about="#Grecia.Lapizco-Encinas"/>
+    <foaf:Person rdf:about="#Naiwen.Lin"/>
+    <foaf:Person rdf:about="#Meem.Mahmud"/>
+    <foaf:Person rdf:about="#Aaron.Mannes"/>
+    <foaf:Person rdf:about="#Katy.Newton"/>
+    <foaf:Person rdf:about="#Bijan.Parsia"/>
+    <foaf:Person rdf:about="#Ron.Reck"/>
+    <foaf:Person rdf:about="#Femke.Reitsma"/>
+    <foaf:Person rdf:about="#Edna.Ruckhaus"/>
+    <foaf:Person rdf:about="#Andrew.Schain"/>
+    <foaf:Person rdf:about="#Yvonne.Shashoua"/>
+    <foaf:Person rdf:about="#Chris.Shenton"/>
+    <foaf:Person rdf:about="#Evren.Sirin"/>
+    <foaf:Person rdf:about="#Chris.Testa"/>
+    <foaf:Person rdf:about="#Dave.Wang"/>
+    <foaf:Person rdf:about="#Matt.Westhoff"/>
+    <foaf:Person rdf:about="#David_Wood"/>
+    <foaf:Person rdf:about="#Bin.Zhao"/>
+  </owl:distinctMembers>
+</owl:AllDifferent>
+</rdf:RDF>
+
