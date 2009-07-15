@@ -1,0 +1,37 @@
+/***********************************************************/
+/*********************SEMANTIC AGENT ***********************/
+/***********************************************************/
+/************************EXAMPLE****************************/
+/***********************************************************/
+/*********************Consistency Checking******************/
+
+
+1/ What is this example doing ?
+
+This example shows the incremental consistency checking of the agent's Knowledge Base.
+It is an adapted version of the "IncrementalConsistencyExample" distributed with Pellet.
+
+Two agents:
+- SendPropertyAgent
+- VerifyAgent
+
+"SendPropertyAgent" sends a property to verify agent which tries to add it in its Knowledge Base. 
+As the received property is inconsistent with "VerifyAgent"'s Knowledge Base, the property is not added and
+explanations of inconsistency are displayed.
+
+Watch the output window to see why the sent property is inconsistent with the Knowledge Base.
+
+Files :
+SendProperty
+- Config File : config/SendPropertyAgent.properties
+- Behaviour : memory_init/SendPropertyBehaviour.swrl
+
+VerifyAgent
+- Config File : config/VerifyAgent.properties
+- Behaviour : memory_init/VerifyBehaviour.swrl
+
+
+2/ How to run this example
+startVerify.bat (Windows)
+startVerify.sh (Linux)
+
