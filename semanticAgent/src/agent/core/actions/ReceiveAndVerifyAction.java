@@ -21,7 +21,8 @@ import agent.core.swrlagent.SWRLAgent;
 import jade.core.Agent;
 import jade.lang.acl.ACLMessage;
 
-/**
+/** This action wait for a received message, integrate it in the knowledge base
+ * and verify the consistency of the added property/concept/individual
  * 
  * @author Julien Subercaze
  * 
@@ -37,7 +38,6 @@ public class ReceiveAndVerifyAction implements Action {
 	msg = a.blockingReceive();
 	String content = msg.getContent();
 	String ontology = msg.getOntology();
-	a.log.info("!!!!! Content " + content);
 
 	// Add the received
 	OntModel model = a.mem.getModel();
