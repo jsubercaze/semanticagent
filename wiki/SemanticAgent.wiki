@@ -2,7 +2,16 @@
 
 =Description=
 
-Coming soon
+SemanticAgent is a project of programming agents using Semantic Web
+technologies. Unlike other agents dealing with semantic data, SemanticAgent language is based on SWRL and its knowledge base is in OWL. Therefore the agent language is perfectly adapated to manipulate knowledge from the knowledge base in order to take decision.
+
+
+
+
+
+In English, a [http://liris.cnrs.fr/Documents/Liris-4793.pdf book chapter on semantic agent] and a [http://liris.cnrs.fr/Documents/Liris-4495.pdf conference article] are available.
+
+For the french, a detailed description is given in my [http://theses.insa-lyon.fr/publication/2010ISAL0104/these.pdf PhD]
 
 == Running the demo ==
 
